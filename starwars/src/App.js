@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
+import CharacterCard from './components/CharacterCard';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -20,11 +21,13 @@ useEffect(() => {
       console.log("You have an error!", err);
     });
 }, []);
-//.........................................Build out Renderer next....
+
 
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
+      <CharacterCard />
+
     </div>
   );
 }
