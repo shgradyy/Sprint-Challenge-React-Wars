@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
-import CharacterCard from './components/CharacterCard';
+import CharacterCard from './components/CharacterCard.js';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -26,8 +26,9 @@ useEffect(() => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <CharacterCard />
-
+      {Object.keys(character).map(currentValue => {
+        return <CharacterCard data={character[currentValue]} key={currentValue} />;
+      })}
     </div>
   );
 }
