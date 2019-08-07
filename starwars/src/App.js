@@ -26,9 +26,12 @@ useEffect(() => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      {Object.keys(character).map(currentValue => {
-        return <CharacterCard data={character[currentValue]} key={currentValue} />;
-      })}
+      {character.map((value, key) => {
+        return(
+          <CharacterCard value={value} key={key} />
+        )
+      })} 
+
     </div>
   );
 }
