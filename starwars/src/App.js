@@ -30,7 +30,7 @@ useEffect(() => {
         return <CharacterCard 
           name = {person.name}
           />
-        
+       
       })} 
 
     </div>
