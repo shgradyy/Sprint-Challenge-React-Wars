@@ -26,10 +26,11 @@ useEffect(() => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      {character.map((value, key) => {
-        return(
-          <CharacterCard value={value} key={key} />
-        )
+      {character.map(person => {
+        return <CharacterCard 
+          name = {person.name}
+          />
+        
       })} 
 
     </div>
